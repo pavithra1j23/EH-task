@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <center>
+    <h1 id="one">hello</h1>
+    <button ondblclick="changeMessage()">Double click</button>
+<script>
+    function changeMessage(){
+        document.getElementById("one").innerHTML = "you are double clicked";
+    }
+</script>
+
+<h1 id="two">Move your mouse here </h1>
+<button onmousemove="moving()"> move mouse here</button>
+<script>
+    function moving(){
+        document.getElementById("two").innerHTML = "you are moved a mouse here";
+    }
+</script>
+
+    <h1 id="three">Move your mouse away</h1>
+    <button onmouseout="moved()">Move Mouse Away</button>
+    <script>
+        function moved() {
+            document.getElementById("three").innerHTML = "Mouse left the button";
+        }
+    </script>
+
+<br><br>
+   <input type="text" onkeydown="showMessage()" placeholder="Type something">
+    <p id="four">Press any key</p>
+    <script>
+        function showMessage() {
+            document.getElementById("four").innerHTML = "You pressed a key";
+        }
+    </script>
+<br><br>
+<input onblur="names()" type="text"  placeholder="enter your name" >
+<p id="five">enter your name on box</p>
+<script>
+    function names(){
+        document.getElementById("five").innerHTML = "your attention is changed";
+    }
+</script>
+
+ <select onchange="showValue()">
+        <option value="">Select a language</option>
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+        <option value="JavaScript">JavaScript</option>
+    </select>
+    <p id="six">Select something</p>
+    <script>
+        function showValue() {
+            document.getElementById("six").innerHTML = "Value changed";
+        }
+    </script>
+ <input type="text" onfocus="clicking()" placeholder="Click here">
+    <p id="seven">Click the input box</p>
+    <script>
+        function clicking() {
+            document.getElementById("seven").innerHTML = "You are clicked the input box";
+        }
+    </script>
+
+   <h2 id="eight">Start typing</h2>
+    <input type="text" oninput="typing()" placeholder="Type something">
+    <script>
+        function typing() {
+            document.getElementById("eight").innerHTML = "You are typing";
+        }
+    </script>
+<br><br>
+   <form onsubmit="writing(); return false;">
+        <input type="text" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="nine"></p>
+    <script>
+        function writing() {
+            document.getElementById("nine").innerHTML = "Form submitted successfully";
+        }
+    </script>
+
+ <form onreset="resetProcess()">
+        <input type="text" placeholder="Enter your name">
+        <button type="reset">Reset</button>
+    </form>
+    <p id="ten">Enter something and click Reset</p>
+    <script>
+        function resetProcess() {
+            document.getElementById("ten").innerHTML ="Form has been reset";
+        }
+    </script>
+
+</center>
+</body>
+</html>
+

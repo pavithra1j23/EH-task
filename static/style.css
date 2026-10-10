@@ -1,0 +1,13 @@
+*{
+    color: rgb(253, 134, 7);
+    background-color: rgb(21, 19, 19);
+    padding: 10px;
+    border-color: rgb(230, 157, 63);
+    margin: 5px;
+    border-radius:15px;
+}
+#one,#three,#five,#seven,#nine,#ten
+{
+    color: aqua;
+    background-color: rgb(51, 42, 36);
+}
